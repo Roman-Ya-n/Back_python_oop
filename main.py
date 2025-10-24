@@ -48,7 +48,7 @@ class Teams:
 class YoungTeams(Teams, Player): #Множинне наслідування
     
     def __init__(self, team_id, team_name, points, wins, losses, draws, goal_difference, max_age, player_name, player_age): #Конструктор класу
-        Teams.__init__(team_id, team_name, points, wins, losses, draws, goal_difference)
+        Teams.__init__(self, team_id, team_name, points, wins, losses, draws, goal_difference)
         Player.__init__(self, player_name, player_age)
         self.max_age = max_age
         self.__roster = []
@@ -92,7 +92,7 @@ mu_team = Teams(2, "Manchester United", 45, 13, 7, 4, 20)
 liverpool_team = Teams(3, "Liverpool", 48, 14, 6, 4, 22)
 mc_team = Teams(4, "Manchester City", 52, 16, 4, 4, 30)
 
-youth_team = YoungTeams(1, "Arsenal Academy", 30, 9, 3, 3, 15, 23)
+youth_team = YoungTeams(1, "Arsenal Academy", 30, 9, 3, 3, 15, 18, "", 0)
 women_team = WomenTeams(1, "Arsenal Women", 40, 12, 4, 4, 20, 1)
 
 # Приклад поліморфізму
