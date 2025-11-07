@@ -5,7 +5,7 @@ from django.db import models
 class Team(models.Model):
     team_id = models.AutoField(primary_key=True)
     team_name = models.CharField(max_length=100, unique=True)
-    point = models.IntegerField(default=0)
+    points = models.IntegerField(default=0)
     wins = models.IntegerField(default=0)
     loses = models.IntegerField(default=0)
     draws = models.IntegerField(default=0)
